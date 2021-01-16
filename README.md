@@ -1,0 +1,2 @@
+# NewappSpiceUP
+Django App
