@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+    <title>World Wide Covid-19</title>
+</head>
+
+<body>
+
+    <div id='map'></div>
+    <h1>Lists of All Country</h1>
+    {% for i in response%}
+    {{i.Country}}
+    {% endfor%}
+
+</body>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic3RvbmVkZXllIiwiYSI6ImNrZTJvdHljdTBiZzMyemxlNDFyNm00aXEifQ.76EpuzAMcJs0T5GqOs3Rzw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom:1
+    });
+</script>
+
+
+
+
+
+</html>
